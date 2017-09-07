@@ -9,10 +9,6 @@ struct Poly {
         exp = -1;
         coef = -1;
     }
-    Poly(int e,double c) {
-        exp = e;
-        coef = c;
-    }
 }; 
 
 int main() {
@@ -54,8 +50,8 @@ int main() {
             k++;
         }
         if(a[i].exp < b[j].exp) {
-            r[k].exp = b[i].exp;
-            r[k].coef = b[i].coef;
+            r[k].exp = b[j].exp;
+            r[k].coef = b[j].coef;
             j++;
             k++;
         }
@@ -66,9 +62,9 @@ int main() {
     	return 0;
 	}
     k = 0;
-    while(r[k].exp != -1) {
-        printf(" %d %.1f",r[k].exp,r[k].coef);
-        k++;
-    }
+     while(r[k].exp != -1) {
+         printf(" %d %.1lf",r[k].exp,r[k].coef);
+         k++;
+     }
     return 0;
 }
